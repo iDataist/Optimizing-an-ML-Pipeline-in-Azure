@@ -1,0 +1,12 @@
+2021-05-12 20:02:29.493 - INFO - 77225 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetBestChild
+2021-05-12 20:02:29.545 - INFO - 77225 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-05-12 20:02:30.198 - INFO - 77225 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=653.16[ms]
+2021-05-12 20:02:30.522 - INFO - 77225 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetBestChild, HowEnded=Success, Duration=1029.63[ms]
+2021-05-12 20:02:40.736 - INFO - 77225 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-05-12 20:02:40.776 - INFO - 77225 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-05-12 20:02:40.802 - INFO - 77225 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-05-12 20:02:41.455 - INFO - 77225 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=652.89[ms]
+2021-05-12 20:02:41.775 - INFO - 77225 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=998.15[ms]
+2021-05-12 20:02:41.775 - INFO - 77225 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2021-05-12 20:02:45.346 - INFO - 77225 - azureml.train.automl._model_download_utilities._log_activity:93 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=3571.31[ms]
+2021-05-12 20:02:45.347 - INFO - 77225 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=4611.42[ms]

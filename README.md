@@ -1,12 +1,9 @@
 # Optimizing an ML Pipeline in Azure
 
 ## Overview
-In this project, I constructed ML pipelines using scikit-learn, Hyperdrive, and AutoML. First, I constructed a pipeline with scikit-learn. Second, I configured a Hyperdrive run to find the optimal hyperparameters. Lastly, I configured an AutoML run to find an optimal model and set of hyperparameters. 
+In this project, I constructed ML pipelines to predict if a client will subscribe to a term deposit with the bank, using Azure Hyperdrive, and AutoML. First, I constructed a pipeline with scikit-learn and configured a Hyperdrive run to find the optimal hyperparameters. Second, I configured an AutoML run to find an optimal model and set of hyperparameters. Lastly, I compared the performance between the two approaches. 
 
-## Summary
-I built a classifier to predict if the client will subscribe to a term deposit with the bank, and deployed it to an Azure Container Instance (ACI). You can find the details of the dataset [here](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
-
-## Scikit-learn Pipeline
+## Hyperdrive
 The pipeline steps include cleaning data, balancing class, split the data into training/validation/test sets, training, testing and savings models. The classification algorithm is logistic regression, which is a binary classifier and one of the simplest models. The hyperparameter tuning focuses on two parameters: inverse of regularization strength and maximum number of iterations to converge.
 
 I used RandomParameterSampling as the parameter sample. Parameter values are chosen from a set of discrete values or a distribution over a continuous range. The main benefit is the simplicity and relatively smaller number of runs. 
@@ -25,8 +22,3 @@ The effect is that the model can quickly fit, then overfit the training dataset.
 ## Pipeline comparison
 Weighted AUC is the metric used for comparison. AUC is the  Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores. It balances true positive and false positive rates. The "weighted" option calculates metrics for each label, and find their average, weighted by the number of true instances for each label. The AutoML pipeline chose a more complex model that has a higher Weighted AUC score, The Hyperdrive pipeline used a very simple model that has a slightly lower AUC score.
 
-## Future work
-For the Hyperdrive pipeline, I will try a few models that are more complex, including tree based ensemble models that have more parameters to tune.  For the AutoML pipeline, I will experiment with more settings including the featurization. It is currently turned off because the data has been cleaned. 
-
-## Proof of cluster clean up
-![](screenshots/delete.png)
